@@ -1,0 +1,6 @@
+для трансляции slug на английский использовал https://m5-web.com/blog/202
+
+    def save(self):
+        if not self.slug:
+            self.slug = slugify(translit(self.name, 'ru', reversed=True))
+        super(Tovar, self).save()
