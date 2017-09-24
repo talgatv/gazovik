@@ -46,15 +46,15 @@ DJANGO_APPS = [
 ]
 THIRD_PARTY_APPS = [
     # 'crispy_forms',  # Form layouts
-    # 'allauth',  # registration
-    # 'allauth.account',  # registration
+    'allauth',  # registration
+    'allauth.account',  # registration
     # 'allauth.socialaccount',  # registration
 ]
 
 # Apps specific for this project go here.
 LOCAL_APPS = [
     # custom users app
-    # 'gazovik.users.apps.UsersConfig',
+    'gazovik.users.apps.UsersConfig',
     'gazovik.webapp'
     # Your stuff: custom apps go here
 ]
