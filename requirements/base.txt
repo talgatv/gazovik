@@ -53,5 +53,9 @@ django-compressor==2.2
 # Your custom requirements go here
 
 transliterate
-pycurl lxml # libxml2-dev libxslt-dev
+pycurl
+lxml
+
+# libxml2-dev libxslt-dev
+
 grab

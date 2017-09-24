@@ -7,7 +7,7 @@ class Tovar(models.Model):
     """docstring for Tovar."""
     slug = models.SlugField(max_length=100, unique=True, blank=True)
     name = models.CharField(blank=False, max_length=100)
-    description = models.CharField(blank=True, max_length=100)
+    description = models.TextField(blank=True, max_length=100)
     image = models.ImageField(upload_to="/media/upload", height_field=640, width_field=360, blank=True)
     price = models.IntegerField(blank=True, null=True)
     category = models.ForeignKey('Category', db_index=True)
