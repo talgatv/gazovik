@@ -14,6 +14,7 @@ urlpatterns = [
 
     # User management
     url(r'^users/', include('gazovik.users.urls', namespace='users')),
+    url(r'^catalog/', include('gazovik.webapp.urls', namespace='catalog')),
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here

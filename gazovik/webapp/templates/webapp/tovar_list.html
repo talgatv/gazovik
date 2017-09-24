@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>slug</td>
+    <td>name</td>
+    <td>description</td>
+    <td>image</td>
+    <td>price</td>
+    <td>data</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{% url 'catalog:detail' object.slug %}">{{object}}</a></td>
+    <td>{{ object.slug }}</td>
+    <td>{{ object.name }}</td>
+    <td>{{ object.description }}</td>
+    <td>{{ object.image }}</td>
+    <td>{{ object.price }}</td>
+    <td>{{ object.data }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
