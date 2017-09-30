@@ -1,27 +1,42 @@
+
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<table class="table">
-<tr>
-<td>ID</td><td>Link</td>
-    <td>slug</td>
-    <td>name</td>
-    <td>description</td>
-    <td>image</td>
-    <td>price</td>
-    <td>data</td>
-</tr>
+
+
+        <div class="row">
+          <header class="col-md-12">
+            <div class="form-group pull-right">
+              <select class="form-control">
+                <option>Default sorting</option>
+                <option>Sort by sales</option>
+                <option>Sort by popularity</option>
+                <option>Sort by sales</option>
+              </select>
+            </div>
+            <div class="clearfix"></div>
+          </header>
+
+          <!-- Start roducts-list-->
+          <ul class="products-list">
 {% for object in object_list %}
-<tr>
-    <td>{{object.pk}}</td>
-    <td><a href="{% url 'catalog:detail' object.slug %}">{{object}}</a></td>
-    <td>{{ object.slug }}</td>
-    <td>{{ object.name }}</td>
-    <td>{{ object.description }}</td>
-    <td>{{ object.image }}</td>
-    <td>{{ object.price }}</td>
-    <td>{{ object.data }}</td>
-</tr>
+            <li class="col-md-3 col-sm-6">
+              	<div class="shop-item">
+                	<div class="product-image">
+                    	<img src="{{ MEDIA_URL }}/{{ object.image }}" alt="">
+                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+                   	</div>
+                	<div class="product-details">
+                  		<h3><a href="{{object.pk}}">{{ object.name }}</a></h3>
+                  		<span class="product-categories"><a href="#">Wallpaper</a></span>
+                    </div>
+                	<span class="product-price">{{ object.price }}  &#8381;</span>
+              	</div>
+            </li>
 {% endfor %}
-</table>
+
+          </ul>
+          <!-- конец roducts-list-->
+        </div>
+<!-- конец снизу див конец контейнер-->
 {% endblock %}

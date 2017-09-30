@@ -1,131 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
-
-        <div class="row">
-          <header class="col-md-12">
-            <div class="form-group pull-right">
-              <select class="form-control">
-                <option>Default sorting</option>
-                <option>Sort by sales</option>
-                <option>Sort by popularity</option>
-                <option>Sort by sales</option>
-              </select>
-            </div>
-            <div class="clearfix"></div>
-          </header>
-
-          <!-- Start roducts-list-->
-          <ul class="products-list">
-            <li class="col-md-3 col-sm-6">
-              	<div class="shop-item">
-                	<div class="product-image">
-                    	<img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="">
-                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
-                   	</div>
-                	<div class="product-details">
-                  		<h3><a href="#">Product 1</a></h3>
-                  		<span class="product-categories"><a href="#">Wallpaper</a></span>
-                    </div>
-                	<span class="product-price">$340</span>
-              	</div>
-            </li>
-            <li class="col-md-3 col-sm-6">
-              	<div class="shop-item">
-                	<div class="product-image">
-                    	<img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="">
-                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
-                        <span class="shop-badge label-danger">Hot</span>
-                  	</div>
-                	<div class="product-details">
-                  		<h3><a href="#">Product 2</a></h3>
-                  		<span class="product-categories"><a href="#">Wallpaper</a></span>
-                  	</div>
-                	<span class="product-price">$570</span>
-              	</div>
-            </li>
-            <li class="col-md-3 col-sm-6">
-              	<div class="shop-item">
-                	<div class="product-image">
-                    	<img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="">
-                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
-                   	</div>
-                	<div class="product-details">
-                  		<h3><a href="#">Product 3</a></h3>
-                  		<span class="product-categories"><a href="#">Wallpaper</a></span>
-                   	</div>
-                	<span class="product-price">$150</span>
-              	</div>
-            </li>
-            <li class="col-md-3 col-sm-6">
-              	<div class="shop-item">
-                	<div class="product-image">
-                    	<img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="">
-                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
-                   	</div>
-                	<div class="product-details">
-                  		<h3><a href="#">Product 4</a></h3>
-                  		<span class="product-categories"><a href="#">Wallpaper</a>, <a href="#">Paintings</a></span>
-                   	</div>
-                	<span class="product-price">$540</span>
-              	</div>
-            </li>
-            <li class="col-md-3 col-sm-6">
-              	<div class="shop-item">
-                	<div class="product-image">
-                    	<img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="">
-                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
-                  	</div>
-                	<div class="product-details">
-                  		<h3><a href="#">Product 5</a></h3>
-                  		<span class="product-categories"><a href="#">Wallpaper</a>, <a href="#">Screen</a></span>
-                  	</div>
-                	<span class="product-price">$210</span>
-              	</div>
-            </li>
-            <li class="col-md-3 col-sm-6">
-              	<div class="shop-item">
-                	<div class="product-image">
-                    	<img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="">
-                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
-                        <span class="shop-badge label-success">Sale</span>
-                  	</div>
-                	<div class="product-details">
-                  		<h3><a href="#">Product 6</a></h3>
-                  		<span class="product-categories"><a href="#">Wallpaper</a></span>
-                   	</div>
-                	<span class="product-price">$1740</span>
-               	</div>
-            </li>
-            <li class="col-md-3 col-sm-6">
-              	<div class="shop-item">
-                	<div class="product-image">
-                    	<img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="">
-                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
-                  	</div>
-                	<div class="product-details">
-                  		<h3><a href="#">Product 7</a></h3>
-                  		<span class="product-categories"><a href="#">Wallpaper</a></span>
-                  	</div>
-                	<span class="product-price">$1490</span>
-               	</div>
-            </li>
-            <li class="col-md-3 col-sm-6">
-              	<div class="shop-item">
-                	<div class="product-image">
-                    	<img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="">
-                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
-                  	</div>
-                	<div class="product-details">
-                  		<h3><a href="#">Product 8</a></h3>
-                  		<span class="product-categories"><a href="#">Wallpaper</a>, <a href="#">Posters</a></span>
-                  	</div>
-                	<span class="product-price">$650</span>
-               	</div>
-            </li>
-          </ul>
-          <!-- конец roducts-list-->
-        </div>
-<!-- конец снизу див конец контейнер-->
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>name</td>
+    <td>slug</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{% url 'catalog:detail' object.slug %}">{{object}}</a></td>
+    <td>{{ object.name }}</td>
+    <td>{{ object.slug }}</td>
+</tr>
+{% endfor %}
+</table>
 {% endblock %}
