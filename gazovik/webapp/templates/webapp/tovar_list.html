@@ -23,12 +23,12 @@
             <li class="col-md-3 col-sm-6">
               	<div class="shop-item">
                 	<div class="product-image">
-                    	<img src="{{ MEDIA_URL }}/{{ object.image }}" alt="">
-                        <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart"></i></a>
+                    	<img src="{{ MEDIA_URL }}/{{ object.image }}" alt="" >
+                      
                    	</div>
                 	<div class="product-details">
-                  		<h3><a href="{{object.pk}}">{{ object.name }}</a></h3>
-                  		<span class="product-categories"><a href="#">Wallpaper</a></span>
+                  		<h3><a href="{% url 'catalog:detail' object.slug %}">{{ object.name }}</a></h3>
+
                     </div>
                 	<span class="product-price">{{ object.price }}  &#8381;</span>
               	</div>
