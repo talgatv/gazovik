@@ -1,14 +1,74 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<p><a class="btn btn-default" href="{% url 'catalog:list' %}">Назад</a></p>
-<table class="table">
-<tr><td>slug</td><td>{{ object.slug }}</td></tr>
-<tr><td>name</td><td>{{ object.name }}</td></tr>
-<tr><td>description</td><td>{{ object.description }}</td></tr>
-<tr><td>image</td><td>{{ object.image.url }}</td></tr>
-<tr><td>price</td><td>{{ object.price }}</td></tr>
-<tr><td>data</td><td>{{ object.data }}</td></tr>
-</table>
+
+        <div class="row">
+        	<div class="col-md-9">
+            	<div class="single-product">
+                	<div class="row">
+                    	<div class="col-md-5">
+                        	<a href="{{ MEDIA_URL }}/{{ object.image }}" data-rel="prettyPhoto[pro gallery]"><img src="{{ MEDIA_URL }}/{{ object.image_mini }}" alt="" class="img-thumbnail"></a>
+                            <div class="spacer-20"></div>
+
+<!--  другие картинки
+                            <div class="row">
+                            	<div class="col-md-4 col-sm-4 col-xs-4">
+                        			<a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" data-rel="prettyPhoto[pro gallery]"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="" class="img-thumbnail"></a>
+                                </div>
+                            	<div class="col-md-4 col-sm-4 col-xs-4">
+                        			<a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" data-rel="prettyPhoto[pro gallery]"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="" class="img-thumbnail"></a>
+                                </div>
+                            	<div class="col-md-4 col-sm-4 col-xs-4">
+                        			<a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" data-rel="prettyPhoto[pro gallery]"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER.jpg" alt="" class="img-thumbnail"></a>
+                                </div>
+                            </div>
+                            -->
+                       	</div>
+                        <div class="col-md-7">
+                        	<h2>{{ object.name }}</h2>
+                            <p class="accent-color lead">{{ object.price }}  &#8381;</p>
+                        	<p>{{ object.description }}</p>
+
+                            <div class="spacer-30"></div>
+
+                        </div>
+                  	</div>
+                    <div class="spacer-30"></div>
+                    <div class="tabs">
+                      	<ul class="nav nav-tabs">
+                        	<li class="active"> <a data-toggle="tab" href="#description"> Описание </a> </li>
+                        	<li> <a data-toggle="tab" href="#reviews"> Дополнительно </a> </li>
+                      	</ul>
+                      	<div class="tab-content">
+                        	<div id="description" class="tab-pane active">
+                        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                        	</div>
+                        	<div id="reviews" class="tab-pane">
+                        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                        	</div>
+                      	</div>
+                    </div>
+                    <div class="spacer-30"></div>
+
+                </div>
+           	</div>
+            <!-- Start Sidebar -->
+            <div class="col-md-3 sidebar">
+              	<div class="widget sidebar-widget">
+                	<div class="sidebar-widget-title">
+                  		<h3>Другие категории</h3>
+                	</div>
+                	<ul>
+                  		<li><a href="#">Газовые плиты</a></li>
+                  		<li><a href="#">Вытяжки</a></li>
+                  		<li><a href="#">Котлы</a></li>
+                  		<li><a href="#">Fabric</a></li>
+                	</ul>
+              	</div>
+            </div>
+          </div>
+        </div>
+
 
 {% endblock %}

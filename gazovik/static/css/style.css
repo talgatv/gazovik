@@ -734,7 +734,7 @@ body.boxed .body .site-header, body.boxed .body .main-menu-wrapper{
 }
 .navigation{
 	height:50px;
-	background:#f8f7f3;
+	background:#fff30b;
 	-webkit-box-shadow:0 0 3px rgba(0,0,0,.4);
 	-moz-box-shadow:0 0 3px rgba(0,0,0,.4);
 	box-shadow:0 0 3px rgba(0,0,0,.4);
@@ -1328,7 +1328,7 @@ html[xmlns] .slides {
 	transition: right .3s .2s;
 }
 .notice-bar, .page-header{
-	background:#f8f7f3;
+	background:#fff30b;
 	padding:20px 0;
 	box-shadow:0 2px 0 rgba(0,0,0,.07);
 }
@@ -1688,7 +1688,7 @@ html[xmlns] .slides {
 }
 .site-footer{
 	background-color:#f8f7f3;
-	padding:50px 0;
+	padding:21px 0;
 	box-shadow:0 -2px 0 rgba(0,0,0,.07);
 }
 .site-footer-bottom{

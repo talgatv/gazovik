@@ -1,1 +1,44 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="span4">
+
+  <address>
+
+  <p><span class="lead">+7 (3473) 25-00-84, 8-963-894-55-84</span></p>
+
+
+ <p><i class="fontello icon-users"></i> <b> Мы работаем:</b> ПН-ПТ с 9 до 19, СБ с 10 до 18, ВС  с 10 до 17</p>
+ <p><i class="fontello icon-home"></i> <b>Адрес:</b> 453124, Республика Башкортостан, г. Стерлитамак, ул. Худайбердина, 76 (около остановки "Горгаз")</p>
+ <p><i class="fontello icon-mail-alt"></i> <b>E-mail:</b> magazin-gazovik@hotmail.com </p>
+
+
+
+
+
+</address>
+
+
+</div>
+
+<a class="dg-widget-link" href="http://2gis.ru/sterlitamak/firm/7600352652165877/center/55.949872,53.625611/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Стерлитамака</a>
+<div class="dg-widget-link"><a href="http://2gis.ru/sterlitamak/center/55.949872,53.625611/zoom/16/routeTab/rsType/bus/to/55.949872,53.625611╎Газовик, магазин газового оборудования?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Газовик, магазин газового оборудования</a></div>
+<script
+  charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+  <script charset="utf-8">
+    new DGWidgetLoader({
+      "width": 1000,
+      "height": 400,
+      "borderColor": "#a3a3a3",
+      "pos": {
+        "lat": 53.625611,
+        "lon": 55.949872,
+        "zoom": 16
+      },
+      "opt": {
+        "city": "sterlitamak"
+      },
+      "org": [{
+        "id": "7600352652165877"
+      }]
+    });
+  </script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript> {% endblock %}

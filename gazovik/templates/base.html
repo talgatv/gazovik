@@ -91,7 +91,7 @@
         <div class="col-md-12">
           <ol class="breadcrumb">
             <li><a href="index.html">Home</a></li>
-            <li class="active">Our Shop</li>
+            <li class="active">{{ page.title }}</li>
           </ol>
         </div>
       </div>
@@ -103,7 +103,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Our Shop</h1>
+          <h1>{{ page.title }}{{ section.title }}{{ title }}{{ article.title }} - {{ block.super }}{{ entry.title }}{{ page.name }}</h1>
         </div>
       </div>
     </div>
@@ -135,11 +135,13 @@
   <div class="row">
     <!-- Start Footer Widgets -->
     <div class="col-md-4 col-sm-4 widget footer-widget">
-      <h4 class="footer-widget-title">About our Church</h4>
+      <h4 class="footer-widget-title">О нашем магазине</h4>
       <img src="{% static 'images/logo.png' %}" alt="Logo">
       <div class="spacer-20"></div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis consectetur adipiscing elit. Nulla convallis egestas rhoncus</p>
+      <p>Мы предлагаем газовое оборудование для учёта, обогрева, комфорта и для безопасного использования в квартирах и частных домах.</p>
     </div>
+
+<!--
     <div class="col-md-4 col-sm-4 widget footer-widget">
       <h4 class="footer-widget-title">Blogroll</h4>
       <ul>
@@ -154,7 +156,9 @@
       <h4 class="footer-widget-title">Our Church on twitter</h4>
       <ul class="twitter-widget" data-tweets-count="1">
       </ul>
-    </div>
+    </div> -->
+
+
   </div>
   </div>
   </footer>
@@ -181,9 +185,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
       <!-- Required by Bootstrap v4 beta -->
-      {# <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>#}
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
 
 
