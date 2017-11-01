@@ -1,10 +1,16 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static category %}
+
 {% block content %}
+
+
 <table class="table">
 <tr><td>name</td><td>{{ object.name }}</td></tr>
 <tr><td>slug</td><td>{{ object.slug }}</td></tr>
+<tr><td>id</td><td>{{ object.id }}</td></tr>
 </table>
-<a class="btn btn-primary" href="{{object.get_update_url}}">Edit Category</a>
+
+{% category_list object.id 10 %}
+
 
 {% endblock %}
