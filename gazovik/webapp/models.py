@@ -28,6 +28,9 @@ class Tovar(models.Model):
     def get_absolute_url(self):
         return reverse('detail', kwargs={'slug': self.slug})
 
+    # def get_absolute_url(self):
+    #     return reverse('webapp_tovar_detail', args=(self.slug,))
+
 
 class Category(models.Model):
     """docstring for Category."""
