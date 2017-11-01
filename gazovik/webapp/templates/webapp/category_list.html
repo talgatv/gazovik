@@ -10,7 +10,7 @@
 {% for object in object_list %}
 <tr>
     <td>{{object.pk}}</td>
-    <td><a href="{% url 'catalog:detail' object.slug %}">{{object}}</a></td>
+    <td><a href="{% url 'catalog:webapp_category_detail' object.slug %}">{{object}}</a></td>
     <td>{{ object.name }}</td>
     <td>{{ object.slug }}</td>
 </tr>

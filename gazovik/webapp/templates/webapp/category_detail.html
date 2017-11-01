@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<p><a class="btn btn-default" href="{% url 'webapp_category_list' %}">Category Listing</a></p>
 <table class="table">
 <tr><td>name</td><td>{{ object.name }}</td></tr>
 <tr><td>slug</td><td>{{ object.slug }}</td></tr>
