@@ -10,6 +10,7 @@ class Tovar(models.Model):
     slug = models.SlugField(max_length=100, unique=True, blank=True)
     name = models.CharField(blank=False, max_length=100)
     description = models.TextField(blank=True, max_length=100)
+    haracteristiki = models.TextField(blank=True, max_length=100)
     image = models.ImageField(upload_to="upload/images/", blank=True)
     # height_field=640, width_field=360,
     image_mini = models.ImageField(upload_to="upload/images/thumb/", blank=True)

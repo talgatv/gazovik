@@ -27,7 +27,7 @@
                         <div class="col-md-7">
                         	<h2>{{ object.name }}</h2>
                             <p class="accent-color lead">{{ object.price }}  &#8381;</p>
-                        	<p>{{ object.description|safe}}</p>
+                        	<p><!--   {{ object.description|safe}} --></p>
 
                             <div class="spacer-30"></div>
 
@@ -41,10 +41,10 @@
                       	</ul>
                       	<div class="tab-content">
                         	<div id="description" class="tab-pane active">
-                        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                        	{{ object.description|safe }}
                         	</div>
                         	<div id="reviews" class="tab-pane">
-                        	{{ object.description|safe }}
+                        	{{ object.haracteristiki|safe }}
                         	</div>
                       	</div>
                     </div>

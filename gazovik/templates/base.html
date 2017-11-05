@@ -18,6 +18,7 @@
   ================================================== -->
   {% block css %}
   {% compress css %}
+
   <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
   {# <link href="{% static 'css/bootstrap-rtl.min.css' %}" rel="stylesheet" type="text/css">#}
   <link href="{% static 'plugins/mediaelement/mediaelementplayer.css' %}" rel="stylesheet" type="text/css">
@@ -27,6 +28,14 @@
   <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen" /><![endif]-->
   <!-- Color Style -->
   <link href="{% static 'colors/color1.css' %}" rel="stylesheet" type="text/css">
+
+
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  // Add the new slick-theme.css if you want the default styling
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+
+
   {% endcompress %}
   {% endblock %}
   <!-- SCRIPTS
@@ -205,6 +214,10 @@
       <script src="{% static 'js/init.js' %}"></script> <!-- All Scripts -->
       <script src="{% static 'plugins/flexslider/js/jquery.flexslider.js' %}"></script> <!-- FlexSlider -->
       <script src="{% static 'plugins/countdown/js/jquery.countdown.min.js' %}"></script> <!-- Jquery Timer -->
+
+
+
+
       {% endcompress %}
 
     {% endblock javascript %}
