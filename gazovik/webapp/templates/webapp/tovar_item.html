@@ -1,0 +1,18 @@
+
+{% load static %}
+
+  <div class="col-md-3 col-sm-6" >
+    	<div class="shop-item">
+      	<div class="product-image thumbnail">
+          	<a href="{% url 'catalog:detail' object.slug %}">
+              <img src="/media/{{ object.image }}" class='img-responsive'/></a>
+
+         	</div>
+      	<div class="product-details">
+        		<b style="height:100px">
+              <a href="{% url 'catalog:detail' object.slug %}" >{{ object.name }}</a></b>
+        </div>
+    	</div>
+      <br />
+      <br />
+  </div>

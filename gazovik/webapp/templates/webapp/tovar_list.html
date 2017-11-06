@@ -19,21 +19,9 @@
 
           <!-- Start roducts-list-->
           <ul class="products-list">
-{% for object in object_list %}
-            <li class="col-md-3 col-sm-6" style="padding-right: 1px;">
-              	<div class="shop-item">
-                	<div class="product-image">
-                    	<a href="{% url 'catalog:detail' object.slug %}"><img src="{{ MEDIA_URL }}/{{ object.image }}" alt="" style="max-height: 433px; max-width: 222px;"></a>
-
-                   	</div>
-                	<div class="product-details">
-                  		<h3><a href="{% url 'catalog:detail' object.slug %}">{{ object.name }}</a></h3>
-
-                    </div>
-                	<!-- <span class="product-price">{{ object.price }}  &#8381;</span>-->
-              	</div>
-            </li>
-{% endfor %}
+          {% for object in object_list %}
+                {% include "webapp/tovar_item.html" %}
+          {% endfor %}
 
           </ul>
           <!-- конец roducts-list-->

@@ -6,6 +6,28 @@
 @import url(https://fonts.googleapis.com/css?family=Volkhov:400italic);
 /*  CSS definations for Native Church  */
 
+
+.thumbnail{
+    width : 100%;
+    height: 400px;
+    overflow: auto;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		border: none;
+}
+
+.thumbnail img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slick-slide img{
+  height: calc(50vh - 100px);
+  width: auto;
+  margin: 0 auto;
+}
+
 /*-------------------------------------------------------------------------------------------*/
 /* 0. RESET */
 /*-------------------------------------------------------------------------------------------*/
@@ -98,15 +120,11 @@ a > img {
 .dgray-bg{
 	background:#333333;
 }
-img {
+
+ object, embed, audio, video {
 	max-width: 100%;
 }
-img, object, embed, audio, video {
-	max-width: 100%;
-}
-img {
-	height: auto;
-}
+
 strong, .strong {
   	font-weight: 700;
 }

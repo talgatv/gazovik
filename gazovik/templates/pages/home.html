@@ -1,18 +1,62 @@
-{% extends "base.html" %} {% load static %}
-
-
+{% extends "base.html" %}
+{% load static category %}
 
 {% block content %}
 
-<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-  <div><h3>1</h3></div>
-  <div><h3>2</h3></div>
-  <div><h3>3</h3></div>
-  <div><h3>4</h3></div>
-  <div><h3>5</h3></div>
-  <div><h3>6</h3></div>
+<h2>Газовые плиты</h2>
+<div class="gallery-slick" style="margin-bottom:120px">
+  {% category_slick 1 10 %}
 </div>
 
+<h2>Котлы</h2>
+<div class="gallery-slick" style="margin-bottom:120px">
+  {% category_slick 4 10 %}
+</div>
+
+<br />
 
 
 {% endblock %}
+
+
+{% block javascript_add %}
+
+<script src="{% static 'slick/slick.min.js' %}"></script> <!-- Jquery Timer -->
+
+<script type="text/javascript">
+   $(document).ready(function(){
+     $('.gallery-slick').slick({
+
+         centerMode: true,
+         adaptiveHeight: true,
+         centerPadding: '60px',
+        //  slidesToShow: 10,
+         variableWidth: true,
+         dots: true,
+         focusOnSelect: true,
+         responsive: [
+           {
+             breakpoint: 768,
+             settings: {
+               arrows: false,
+               centerMode: true,
+               centerPadding: '40px',
+               slidesToShow: 5
+             }
+           },
+           {
+             breakpoint: 480,
+             settings: {
+               arrows: false,
+               centerMode: true,
+               centerPadding: '40px',
+               slidesToShow: 3
+             }
+           }
+         ]
+
+     });
+   });
+ </script>
+
+{% endblock javascript_add %}
