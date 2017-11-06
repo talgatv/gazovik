@@ -1,9 +1,9 @@
 <div>
 
-    <img src="/media/{{ object.image }}" />
+  <img src="/media/{{ object.image }}" />
 
-  <span>
-    <a href="{% url 'catalog:detail' object.slug %}" style='width:50px'>{{ object.name }}</a></b>
+  <span style="margin-right: 10px;">
+    <a href="{% url 'catalog:detail' object.slug %}" style='width:50px'>{{ object.slug }}</a></b>
   </span>
 
 </div>

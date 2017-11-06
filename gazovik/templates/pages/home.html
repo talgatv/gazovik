@@ -3,13 +3,13 @@
 
 {% block content %}
 
-<h2>Газовые плиты</h2>
-<div class="gallery-slick" style="margin-bottom:120px">
+<h2 class="">Газовые плиты</h2>
+<div class="well gallery-slick" style="margin-bottom:120px;  ">
   {% category_slick 1 10 %}
 </div>
 
 <h2>Котлы</h2>
-<div class="gallery-slick" style="margin-bottom:120px">
+<div class="well gallery-slick" style="margin-bottom:120px;  ">
   {% category_slick 4 10 %}
 </div>
 
@@ -34,6 +34,11 @@
          variableWidth: true,
          dots: true,
          focusOnSelect: true,
+        //  slidesToShow: 5,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 2000,
+
          responsive: [
            {
              breakpoint: 768,
