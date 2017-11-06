@@ -18,6 +18,8 @@ class Tovar(models.Model):
     category = models.ForeignKey('Category', db_index=True)
     data = models.DateTimeField(default=timezone.now)
 
+    best = models.BooleanField(default=False)
+
     def __str__(self):
         return str('[{}] {}').format(self.name, self.description)
 

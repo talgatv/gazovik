@@ -24,7 +24,7 @@ def category_slick(context, cat_id, num):
     Товары по категориям в виде слайдера
     """
 
-    result = Tovar.objects.filter(category_id=cat_id).order_by('-id')[:num]
+    result = Tovar.objects.filter(category_id=cat_id, best=True).order_by('-id')[:num]
 
     return {
         'category': result
