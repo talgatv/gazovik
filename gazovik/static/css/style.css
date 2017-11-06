@@ -28,12 +28,16 @@
   margin: 0 auto;
 }
 
-.slick-slide {
+.slick-slide, .shop-item {
   text-align: center;
 }
 
 .well {
-      background-color: #fff;
+  background-color: #fff;
+}
+
+.shop-item {
+  margin-bottom: 100px;
 }
 
 /*-------------------------------------------------------------------------------------------*/
